@@ -19,7 +19,7 @@
   // Anchor point
   Σ = {};
 
-  // Export the Underscore object for CommonJS.
+  // Export the Sigma object for CommonJS.
   if (typeof exports !== 'undefined') {
     exports.Σ = Σ;
     exports.Sigma = Σ;
@@ -61,14 +61,13 @@
     if (window[a_const]) {
       callback();
     } else {
-      if (tries) {
-        if (tries < max_wait_time / try_every) {
-          setTimeout(function() {
-            Σ.wait_for_const_load(a_const, callback, tries || 1);
-          }, try_every);
-        } else {
-          Σ.log("Couldn't load " + a_const + " after waiting " + max_wait_time * 100 + "ms.  Giving up.")
-        }
+      tries = tries || 0;
+      if (tries < max_wait_time / try_every) {
+        setTimeout(function() {
+          Σ.wait_for_const_load(a_const, callback, tries || 1);
+        }, try_every);
+      } else {
+        Σ.log("Couldn't load " + a_const + " after waiting " + max_wait_time * 100 + "ms.  Giving up.")
       }
     }
   }
