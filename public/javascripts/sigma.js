@@ -147,7 +147,7 @@
   //  match   replace   reverse   rindex   rjust    scan   scanf   size   slice   split   squeeze   strip  sub   to_f   to_i   to_s   tr   upcase  
   
   // ------------------------ Array   Functions --------------------------
-  // array to_sentence. to_sentence(['one', 'two', 'three']) reutrns 'one, two, and three'
+  // array to_sentence. Sigma.array(['one', 'two', 'three']).to_sentence() returns 'one, two, and three'
   Σ.array_wrapper.prototype.to_sentence = function() {
     var arr = this._wrapped;
     var result = '';
@@ -166,8 +166,6 @@
     return result;
   }
   
-  // The cornerstone, an each implementation.
-  // Handles objects implementing forEach, arrays, and raw objects.
   // Delegates to JavaScript 1.6's native forEach if available.
   Σ.array_wrapper.prototype.each = function(iterator, context) {
     var obj = this._wrapped;

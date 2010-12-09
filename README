@@ -1,4 +1,4 @@
-Sigma.js javascript library
+Sigma.js javascript library (somewhat experimental)
 © 2010 Steven Soroka (MIT license)
 
 Right now the most compelling feature is the ability to asynchronously load any script and execute code once it's loaded:
@@ -18,3 +18,17 @@ Or separate loading from the dependency!
 See public/javascripts/sigma.js for other methods/docs
 
 See spec/javascripts/*_spec.js for jasmine specs
+
+
+Misc other examples:
+
+    Sigma.string('ActiveRecord::Base').underscore() // returns 'active_record/base'
+    
+    Sigma.array(['one', 'two', 'three']).to_sentence() // returns 'one, two, and three'
+    
+    Sigma.benchmark(function() {
+      my_speedy_function()
+    }, 1000);  // returns milliseconds to execute 1000 times
+    
+    
+Lots more pseudo-planned.  
