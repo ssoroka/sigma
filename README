@@ -1,0 +1,20 @@
+Sigma.js javascript library
+© 2010 Steven Soroka (MIT license)
+
+Right now the most compelling feature is the ability to asynchronously load any script and execute code once it's loaded:
+
+    Sigma.async_script_load('http://documentcloud.github.com/underscore/underscore-min.js', '_', function() {
+      _([1,2,3,2,3,1]).uniq();
+    });
+    
+Or separate loading from the dependency!
+
+    Sigma.async_script_load('http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js');
+    
+    Sigma.wait_for_const_load('jQuery', function() {
+      jQuery('#loaded').text('jQuery has been dynamically loaded');
+    })
+    
+See public/javascripts/sigma.js for other methods/docs
+
+See spec/javascripts/*_spec.js for jasmine specs
