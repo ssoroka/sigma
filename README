@@ -15,11 +15,6 @@ Or separate loading from the dependency!
       jQuery('#loaded').text('jQuery has been dynamically loaded');
     })
     
-See public/javascripts/sigma.js for other methods/docs
-
-See spec/javascripts/*_spec.js for jasmine specs
-
-
 Misc other examples:
 
     Sigma.string('ActiveRecord::Base').underscore() // returns 'active_record/base'
@@ -31,4 +26,8 @@ Misc other examples:
     }, 1000);  // returns milliseconds to execute 1000 times
     
     
-Lots more pseudo-planned.  
+See public/javascripts/sigma.js for other methods/docs
+
+See spec/javascripts/*_spec.js for jasmine specs
+
+Lots more pseudo-planned.  Feedback to @ssoroka
