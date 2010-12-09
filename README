@@ -1,6 +1,8 @@
 Sigma.js javascript library (somewhat experimental)
 © 2010 Steven Soroka (MIT license)
 
+http://github.com/ssoroka/sigma
+
 Right now the most compelling feature is the ability to asynchronously load any script and execute code once it's loaded:
 
     Sigma.async_script_load('http://documentcloud.github.com/underscore/underscore-min.js', '_', function() {
@@ -25,9 +27,14 @@ Misc other examples:
       my_speedy_function()
     }, 1000);  // returns milliseconds to execute 1000 times
     
+Installing the latest version:
+
+    curl https://github.com/ssoroka/sigma/raw/master/public/javascripts/sigma.js > public/javascripts/sigma.js
+
     
 See public/javascripts/sigma.js for other methods/docs
 
 See spec/javascripts/*_spec.js for jasmine specs
 
 Lots more pseudo-planned.  Feedback to @ssoroka
+

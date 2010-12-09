@@ -4,6 +4,7 @@
 // Portions of Sigma were inspired by underscore.js
 //
 // @ssoroka
+// http://github.com/ssoroka/sigma
 
 // don't leak to the global scope.
 (function() {
